@@ -1,0 +1,57 @@
+{
+  "name": "launchpad-ui-starter",
+  "description": "A polished React + TypeScript + Vite starter for portfolio-ready apps and product dashboards.",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "homepage": "./",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --ignore-pattern dist",
+    "preview": "vite preview",
+    "update": "ncu -x tailwindcss,postcss -u && rimraf node_modules package-lock.json && npm install",
+    "optionalupdate": "ncu -x tailwindcss,postcss -u && (if exist node_modules rmdir /s /q node_modules) && (if exist package-lock.json del /f /q package-lock.json) && npm install",
+    "format": "prettier --write .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "axios": "^1.12.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.1",
+    "socket.io-client": "^4.8.1",
+    "react-toastify": "^11.0.5"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.35.0",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "^19.1.9",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^8.43.0",
+    "@typescript-eslint/parser": "^8.43.0",
+    "@vitejs/plugin-react": "^5.0.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.35.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.4.0",
+    "husky": "^9.1.7",
+    "npm-check-updates": "^18.1.1",
+    "postcss": "^8.4.35",
+    "prettier": "^3.6.2",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.43.0",
+    "vite": "^7.1.5"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,tsx,jsx,css,json,md}": [
+      "prettier --write",
+      "eslint --fix",
+      "git add ."
+    ]
+  }
+}
